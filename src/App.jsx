@@ -6,6 +6,12 @@ import ReplaceQuestionMarks from './components/ReplaceQuestionMarks';
 import FormUNJU from './components/FormUNJU';
 import CasillasActivity from './components/CasillasActivity';
 import PetRegistry from './components/PetRegistry';
+import GuessTheNumber from './components/GuessTheNumber';
+import GameOfColours from './components/GameOfColours' 
+import Estrellas from "./components/Estrellas";
+import Formulario from './components/Formulario';
+import AboutMiembros from './components/AboutMiembros';
+
 
 function App() {
   return (
@@ -18,6 +24,11 @@ function App() {
       {/*<FormUNJU/>*/}
       {/*<CasillasActivity/>*/}
       {/*<PetRegistry/>*/}
+      {/*<GuessTheNumber/>*/}
+      {/*<GameOfColours/>*/} 
+      <Estrellas/>
+
+
     </>
   )
 }
