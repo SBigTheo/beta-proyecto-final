@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-import { iniciarIntervalo } from "../data/TiempoIntervalo";
-import Star from "../utils/Star";
+import { iniciarIntervalo } from "../../data/TiempoIntervalo.js";
+import Star from "./Star.jsx";
 import useSound from "use-sound";
 
-import sonidoEstrella from "../assets/audio/sonidoEstrella.mp3";
-import sonidoVictoria from "../assets/audio/victoria.mp3";
+import sonidoEstrella from "../../assets/audio/sonidoEstrella.mp3";
+import sonidoVictoria from "../../assets/audio/victoria.mp3";
 
 const STAR_COLORS = ["#ffffff", "#87ceeb", "#b0e0e6", "#e6e6fa", "#d8bfd8", "#f8f9ff"];
 const SPAWN_INTERVAL_MS = 600;
@@ -96,7 +96,7 @@ export default function Estrellas() {
       <div
         className="bloom-effect rounded-4 border-0"
         style={{
-          width: "90%",
+          width: "100%",
           maxWidth: "900px",
           height: "600px",
           background: "linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(135,206,235,0.1) 50%, rgba(176,224,230,0.1) 100%)",
