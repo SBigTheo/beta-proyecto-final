@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '/src/App.css';
+import '../../styles/App.css';
 
 //estructura basica
 function Juego() {
