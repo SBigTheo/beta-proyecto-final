@@ -5,48 +5,60 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { NavLink } from "react-router-dom";
 import React from "react";
 
-export default function Navbar() {
-  const tabs = [
-    { path: "/login", label: "Login" },
-    { path: "/proyecto2", label: "Proyecto 2" },
-    { path: "/proyecto3", label: "Proyecto 3" },
-    { path: "/proyecto4", label: "Proyecto 4" },
-    { path: "/proyecto5", label: "Proyecto 5" },
-  ];
-
+export default function DesktopNavbar() {
   return (
-    <nav
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        gap: "1rem",
-        background: "linear-gradient(90deg, #8b5cf6, #6366f1, #3b82f6)",
-        padding: "15px",
-        borderRadius: "12px",
-        margin: "20px auto",
-        width: "90%",
-        boxShadow: "0 5px 15px rgba(0,0,0,0.2)",
-      }}
-    >
-      {tabs.map((tab) => (
-        <NavLink
-          key={tab.path}
-          to={tab.path}
-          style={({ isActive }) => ({
-            color: isActive ? "#fff" : "#e0e7ff",
-            background: isActive
-              ? "rgba(255,255,255,0.2)"
-              : "rgba(255,255,255,0.1)",
-            padding: "10px 20px",
-            borderRadius: "20px",
-            textDecoration: "none",
-            fontWeight: "bold",
-            transition: "all 0.3s ease",
-          })}
+    <Navbar
+    bg="primary"
+    data-bs-theme="dark"
+    className="shadow,sm px-4"
+    style={{
+      height: "70px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+    }}
+  >
+    <Container fluid className="d-flex justify-content-between aling-items-center">
+      <Navbar.Brand 
+      as={NavLink} to="/" 
+      className="fw-bold fs-4 text-light"
+      >
+        Proyecto final ñam, mi cerebro ya no cerebrea
+      </Navbar.Brand>
+
+      <Nav className="d-flex aling-items-center gap-4">
+        <Nav.Link as={NavLink} to="/" className="fs-6 text-light">
+          Home
+        </Nav.Link>
+
+        <Nav.Link as={NavLink} to="/aboutmiembros" className="fs-6 text-light">
+               About Miembros
+        </Nav.Link>
+
+        <NavDropdown
+        title={<span className="text-light fs-6>Proyectos</span>"}
+        id="projects-dropdown"
+        menuVariant="dark"
         >
-          {tab.label}
-        </NavLink>
-      ))}
-    </nav>
+          <NavDropdown.Item as={NavLink} to="/proyecto2">
+            Proyecto 2
+          </NavDropdown.Item> 
+          <NavDropdown.Item as={NavLink} to="/proyecto3">
+            Proyecto 3
+          </NavDropdown.Item>
+          <NavDropdown.Item as={NavLink} to="/proyecto4">
+            Proyecto 4
+          </NavDropdown.Item>
+          <NavDropdown.Item as={NavLink} to="/proyecto5">
+            Proyecto 5
+          </NavDropdown.Item>
+        </NavDropdown>
+
+        <Nav.Link as={NavLink} to="/el coso de idiomas" className="fs-6 text-light">
+          El Coso 
+        </Nav.Link>
+      </Nav>
+    </Container>
+  </Navbar>
   );
 }
