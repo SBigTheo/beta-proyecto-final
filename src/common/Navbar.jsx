@@ -36,7 +36,7 @@ export default function DesktopNavbar() {
         </Nav.Link>
 
         <NavDropdown
-        title={<span className="text-light fs-6>Proyectos</span>"}
+        title={<span className="text-light fs-6">Proyectos</span>}
         id="projects-dropdown"
         menuVariant="dark"
         >
